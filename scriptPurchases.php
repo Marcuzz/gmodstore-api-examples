@@ -6,10 +6,9 @@
 
 $script = 1;
 $api_key = '';
-$version = 1;
 $agent = 'My Application Name';
 
-$url = 'https://scriptfodder.com/api/scripts/version/delete/'. $script .'?api_key='. $api_key .'&version=' . $version;
+$url = 'https://scriptfodder.com/api/scripts/purchases/'. $script .'?api_key='. $api_key;
 
 $ch = curl_init();
 curl_setopt($ch, CURLOPT_URL, $url);
@@ -20,6 +19,11 @@ curl_setopt($ch, CURLOPT_FOLLOWLOCATION, true);
 if(!$response = curl_exec($ch))
 	echo curl_error($ch);
 
-echo $response;
-
 curl_close($ch);
+
+# Decode the retrieved JSON into a PHP array
+$purchases = json_decode($response['purchases'], true);
+foreach($purchases as $purchase){
+	# Do whatever ya want with the purchases here
+	print_r($purchase['user_id'] . ', ');
+}

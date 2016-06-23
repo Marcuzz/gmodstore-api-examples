@@ -35,9 +35,6 @@ if(isset($_POST['submit'])){
 	curl_setopt($ch, CURLOPT_TIMEOUT, 50);
 	curl_setopt($ch, CURLOPT_FOLLOWLOCATION, true);
 
-	curl_setopt($ch, CURLOPT_SSL_VERIFYPEER, false);
-	curl_setopt($ch, CURLOPT_SSL_VERIFYHOST, FALSE);
-
 	if(!$response = curl_exec($ch))
 		echo curl_error($ch);
 
