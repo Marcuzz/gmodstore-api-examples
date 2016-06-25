@@ -22,7 +22,9 @@ if(!$response = curl_exec($ch))
 curl_close($ch);
 
 # Decode the retrieved JSON into a PHP array
-$purchases = json_decode($response['purchases'], true);
+$purchases = json_decode($response, true);
+$purchases = $purchases['purchases'];
+
 foreach($purchases as $purchase){
 	# Do whatever ya want with the purchases here
 	print_r($purchase['user_id'] . ', ');
