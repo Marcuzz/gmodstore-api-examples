@@ -8,7 +8,7 @@ $script = 1;
 $api_key = '';
 $agent = 'My Application Name';
 
-$url = 'https://scriptfodder.com/api/scripts/purchases/'. $script .'?api_key='. $api_key;
+$url = 'https://www.gmodstore.com/api/scripts/purchases/'. $script .'?api_key='. $api_key;
 
 $ch = curl_init();
 curl_setopt($ch, CURLOPT_URL, $url);
