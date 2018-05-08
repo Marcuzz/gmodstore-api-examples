@@ -8,7 +8,7 @@ $script = 1;
 $api_key = '';
 $agent = 'My Application Name';
 
-$url = 'https://scriptfodder.com/api/scripts/version/edit/'. $script .'?api_key='. $api_key;
+$url = 'https://www.gmodstore.com/api/scripts/version/edit/'. $script .'?api_key='. $api_key;
 
 if(isset($_POST['submit'])){	
 	$file = false;
