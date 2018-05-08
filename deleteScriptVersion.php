@@ -9,7 +9,7 @@ $api_key = '';
 $version = 1;
 $agent = 'My Application Name';
 
-$url = 'https://scriptfodder.com/api/scripts/version/delete/'. $script .'?api_key='. $api_key .'&version=' . $version;
+$url = 'https://www.gmodstore.com/api/scripts/version/delete/'. $script .'?api_key='. $api_key .'&version=' . $version;
 
 $ch = curl_init();
 curl_setopt($ch, CURLOPT_URL, $url);
