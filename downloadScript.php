@@ -9,7 +9,7 @@ $api_key = '';
 $version = ''; # Leave blank for none
 $agent = 'My Application Name';
 
-$url = 'https://scriptfodder.com/api/scripts/download/'. $script .'?api_key='. $api_key .'&version=' . $version;
+$url = 'https://www.gmodstore.com/api/scripts/download/'. $script .'?api_key='. $api_key .'&version=' . $version;
 
 $fp = fopen('test.zip', 'w+');
 
